@@ -48,11 +48,12 @@ $dijkstra = new Dijkstra($graph, $source, true);
 // And now, let's show some results...
 echo "Time of calculation: ".$dijkstra->getAlgorithmTime()." seconds.\n\n";
 
+//* Mostrar las matrices Distancias y Anteriores.
 // Show the Distances and Previous arrays.
-echo "Distances array: \n";
+echo "Distances array(Matriz de distancias): \n";
 print_r($dijkstra->getDistances());
 
-echo "\nPrevious array: \n";
+echo "\nPrevious array(Matriz anterior): \n";
 print_r($dijkstra->getPrevious());
 
 
@@ -65,5 +66,5 @@ print_r($shortest_path1);
 
 $destination    = 4907;
 $shortest_path2 = $dijkstra->shortestPathTo($destination);
-echo "\nShortest path to 4907: \n";
+echo "\nShortest path to 4907(Camino más corto a 4907): \n";
 print_r($shortest_path2);
